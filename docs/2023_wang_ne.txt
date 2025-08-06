@@ -1,0 +1,2438 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/377304397
+
+Biomimetic olfactory chips based on large-scale monolithically integrated
+nanotube sensor arrays
+Article in Nature Electronics · January 2024
+DOI: 10.1038/s41928-023-01107-7
+
+CITATIONS
+
+READS
+
+75
+
+1,047
+
+21 authors, including:
+Chen Wang
+
+Zhesi Chen
+
+Jilin University
+
+Hong Kong University of Science and Technology
+
+54 PUBLICATIONS 3,551 CITATIONS
+
+16 PUBLICATIONS 537 CITATIONS
+
+SEE PROFILE
+
+SEE PROFILE
+
+Zhu'An Wan
+
+Wenhao Ye
+
+The University of Hong Kong
+
+Hong Kong University of Science and Technology
+
+10 PUBLICATIONS 507 CITATIONS
+
+10 PUBLICATIONS 462 CITATIONS
+
+SEE PROFILE
+
+All content following this page was uploaded by Zixi Wan on 30 January 2025.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+nature electronics
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+Biomimetic olfactory chips based on
+large-scale monolithically integrated
+nanotube sensor arrays
+Received: 1 November 2022
+Accepted: 23 November 2023
+Published online: xx xx xxxx
+Check for updates
+
+Chen Wang 1,2,3,8,11, Zhesi Chen1,2,11, Chak Lam Jonathan Chan1,2, Zhu’an Wan1,2,
+Wenhao Ye1,2, Wenying Tang1,2, Zichao Ma 1,9, Beitao Ren 1,3,
+Daquan Zhang 1,2,3, Zhilong Song1,2,10, Yucheng Ding 1,3, Zhenghao Long1,3,
+Swapnadeep Poddar1, Weiqi Zhang1,2, Zixi Wan1,2, Feng Xue1,2, Suman Ma1,4,
+Qingfeng Zhou5, Geyu Lu8, Kai Liu 6 & Zhiyong Fan 1,2,3,7
+
+Human olfactory sensors have a large variety of receptor cells that generate
+signature responses to various gaseous molecules. Ideally, artificial
+olfactory sensors should have arrays of diverse sensors. However, it is
+challenging to monolithically integrate large-scale arrays of different
+high-performance gas sensors. Here we report biomimetic olfactory chips
+that integrate nanotube sensor arrays on nanoporous substrates with up to
+10,000 individually addressable sensors per chip. The range of sensors is
+achieved using an engineered material composition gradient. Supported
+by artificial intelligence, the chips offer a high sensitivity to various gases
+with e­xc­el­lent d­is­ti­ng­ui­sh­ability for mixed gases and 24 distinct odours. We
+also show that the olfactory chips can be combined with vision sensors on a
+robot dog to create a system that can identify an object in a blind box.
+
+Artificial olfaction and electronic noses (e-noses) aim to emulate
+the intricate mechanism of the biological olfactory system to effectively discern complex odorant mixtures. Such systems, which have
+been under development for decades, are of use in a wide-range
+array of applications, including food, environmental, medical and
+industrial process control1. A range of commercial e-noses have already
+been developed, including AerNos (https://www.aernos.com),
+Alpha MOS Technologies (https://www.alpha-mos.com), Sensigent (https://www.Sensigent.com), Aryballe Technologies
+
+(https://aryballe.com) and Cyrano Sciences (https://cyranosciences.
+com). However, existing e-nose systems still fall short of their biological counterparts2–8.
+In practical applications, the primary challenges include the difficulty in miniaturizing the system and poor recognition capabilities in determining the exact gas species and their concentrations
+within complex odorant mixtures (as opposed to single-gas species).
+Addressing these deficiencies of e-nose systems is important for existing applications but could also be of use in intelligent systems, such as
+
+Department of Electronic and Computer Engineering, The Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong, China. 2The
+Hong Kong University of Science and Technology–Shenzhen Research Institute, Shenzhen, China. 3State Key Laboratory of Advanced Displays and
+Optoelectronics Technologies, The Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong, China. 4Department of Materials
+Science and Engineering, Southern University of Science and Technology, Shenzhen, China. 5Ai-Sensing Technology Co. Ltd., Foshan National Torch
+Innovation Pioneering Park, Foshan, China. 6State Key Laboratory of New Ceramics and Fine Processing, School of Materials Science and Engineering,
+Tsinghua University, Beijing, China. 7Department of Chemical and Biological Engineering, The Hong Kong University of Science and Technology, Clear
+Water Bay, Hong Kong, China. 8Present address: State Key Laboratory on Integrated Optoelectronics, College of Electronic Science and Engineering,
+Jilin University, Changchun, China. 9Present address: School of Microelectronics, South China University of Technology, Guangzhou, China.
+10
+Present address: Institute for Energy Research, Jiangsu University, Zhenjiang, China. 11These authors contributed equally: Chen Wang, Zhesi Chen.
+e-mail: eezfan@ust.hk
+1
+
+Nature Electronics
+
+Article
+a
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+Odour/gas molecules
+
+b
+
+Olfactory bulb
+
+c
+
+Olfactory cortex
+
+d
+Gas B
+Human nose
+
+Number of genes expressed in
+intact olfactory receptors
+
+e
+
+Olfactory receptors
+
+f
+
+Gas C
+
+g
+
+Gas A
+
+1,800
+
+Gas D
+
+1,600
+Rat
+~1,223
+
+1,400
+1,200
+
+800
+600
+400
+
+Gas E
+
+Dog
+~800
+
+1,000
+
+Macaque
+~293
+
+Human
+~323
+
+200
+0
+
+Monolithic 3D sensor-array chip
+
+Response patterns
+
+Neural network
+algorithm
+
+Fig. 1 | Comparison of the mammalian olfactory system and a BOC system.
+a, Illustration of odour/gas molecules. b, Schematic of the human olfactory
+system consisting of the olfactory epithelium and the olfactory bulb. c, Structure
+of the olfactory cortex. d, Illustration of the recognition result. e, Summary of
+the numbers of genes expressed in intact olfactory receptors from different
+
+mammals: macaque, human, dog and rat. f, Structure of a monolithic BOC with
+the correlated circuit. g, Response patterns for different odour/gas molecules
+from the monolithic BOC and the algorithm design for recognizing the response
+patterns.
+
+advanced robots and portable smart devices, that have applications
+in, for examples, security patrols and rescue operations.
+Mammals can detect and differentiate millions of odours. This
+occurs through a distinctive encoding-combination strategy employed
+by the olfactory receptors and neural networks within the brain9–11. The
+olfactory system in humans (Fig. 1a–d) detects odour/gas molecules
+that dissolve in the mucus on the olfactory epithelium. These molecules
+bind to different olfactory receptors on the cilia of olfactory neurons,
+instigating an electrical response. This response is transmitted through
+the olfactory nerves and fibres to the olfactory bulbs for processing.
+Signals are then transmitted by the olfactory bulbs to the olfactory
+cortex for comprehensive processing that discriminates the odours.
+Having more types of odour receptor means having a more powerful
+sense of smell. Canines have, for instance, about 1,000 types of olfactory receptors, making their olfaction superior to that of primates
+(Fig. 1e)12.
+A smart chemical-sensing unit—the key component that determines the performance of an e-nose system—is predominantly a gas
+sensor array with a variety of discrete gas sensors or a monolithically
+integrated chip1,13,14. Compared to biological olfactory systems, these
+small sensor arrays have a restricted range of ‘olfactory receptors’,
+which limits system performance. Mainstream gas sensors, regardless
+of their physical or chemical working principle (which include metal
+oxide (MOX) sensors, polymer sensors, surface acoustic wave sensors,
+quartz crystal microbalance sensors, electrochemical sensors and
+nondispersive infrared sensors), are typically individual sensors with
+large form factors15–20. Many of the devices are power hungry and have
+poor selectivity; some are also characterized by a narrow selection
+band (electrochemical and nondispersive infrared sensors) and can
+detect only a single type of gas (Supplementary Table 1). These sensors
+are designed for specific applications, and hence their performance is
+not optimal for generic tasks.
+State-of-the-art microelectromechanical systems (MEMS) have
+enabled the monolithic integration of millions of identical sensors,
+but creating a diversity of sensors beyond hundreds on a single chip
+
+is difficult21–24. The methodologies explored to construct diversified
+sensor arrays are relatively primitive. These methods primarily involve
+drop-coating, printing, chemical vapour deposition or physical vapour
+deposition of different sensing materials (such as polymers, MOXs and
+functionalized carbon nanotubes) sequentially13,21–26. Sensing films
+produced by drop-coating or printing methods often exhibit poor
+mechanical strength, whereas sensing films generated by chemical
+vapour deposition or physical vapour deposition tend to have inferior
+sensing performance because of the small surface area-to-volume ratio
+in the dense sensing film13,26.
+Attempts have been made to tackle these issues by employing
+techniques such as glancing angle deposition to create nano-rod
+nanostructures with enhanced sensing properties. However,
+ensuring consistent reproducibility for mass production
+remains challenging27. Moreover, it is difficult to create hundreds
+of different types of gas-sensing materials, regardless of whether
+organic or inorganic materials are used, and most sensors use similar
+materials with different dopants. Efforts have been made to develop
+chips based on a large sensor array with a temperature gradient and
+a gradient of overlapping membrane layers (the Kamina electronic
+nose)26. However, despite their intriguing design, these devices have
+not attained commercial success. The key challenges associated
+with such devices are their high power consumption and limited
+diversity14. Furthermore, the current algorithms used in e-nose
+systems are relatively singular and difficult to adapt to different
+applications28.
+In this Article, we report biomimetic olfactory chips (BOCs) based
+on large monolithically integrated sensor arrays (Fig. 1f,g). Each BOC
+comprises a high-density array of vertical MOX nanotubes with a
+well-defined three-dimensional (3D) nanostructure and a range of
+pixel types. It is supported by a peripheral signal read-out circuit and
+advanced neural network algorithms. The number of sensors in a BOC
+ranges from 100 to 10,000 to mimic the diversity of biological olfactory receptors. The monolithic 3D chemical sensor-array chip was
+fabricated using atomic layer deposition (ALD) of MOX and subsequent
+
+Nature Electronics
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+a
+
+f
+
+Top electrodes
+
+g
+
+Elemental distribution
+
+Multicomponent interfacial layer
+PdO/SnO2 nanotube
+sensing layer
+
+Muticomponent
+interfacial layer
+
+W+
+
+Bottom electrodes
+
+ZnO (hexagonal)
+NiO (cubic)
+
+Intensity
+
+Pt heater
+
+Intensity
+
+In+
+
+Insulating layer
+
+Ni+
+
+WO3 (monoclinic)
+ZnxWO3 (monoclinic)
+
+c
+
+b
+
+In2O3 (cubic)
+
++
+
+Zn
+
+NiWO4 (monoclinic)
+
+e
+
+Top view of device
+
+i
+
+SiO2
+Pt
+
+)
+
+)
+
+m
+20
+
+35
+
+50
+
+65
+
+80
+
+2θ (degree)
+
+O
+
+Sn
+
+Pd
+
+200 nm
+
+j
+Intensity (cps)
+
+SnO2 (tetragonal)
+
+(m
+
+Al
+
+5 µm
+
+PdO/SnO2 nanotube
+sensing layer
+
+Intensity
+
+(mm
+
+h
+
+PAM
+
+300 nm
+
+tion
+
+o
+si
+ti
+o
+n
+
+osi
+
+In2O3(ZnO)17 (rhombohedral)
+
+p
+
+Xp
+
+k
+
+Raw intensity
+4+
+Sn 3d 3/2
+4+
+Sn 3d 5/2
+
+Intensity (cps)
+
+d
+
+100 µm
+
+Y
+
+500 µm
+
+0
+.
+0 2
+.6
+1.
+0
+1.
+4
+1.
+8
+2.
+2
+2.
+6
+3
+.0
+3
+.4
+3
+.8
+
+In0.3WO3 (hexagonal)
+3 3.8
+3 .4
+2 .0
+2.2 .6
+1
+1 .8
+1 .4
+0 .0
+0.2 .6
+
+Raw intensity
+PdO 3d 3/2
+Pd 3d 3/2
+PdO 3d 5/2
+Pd 3d 5/2
+
+PdO (tetragonal)
+20
+
+35
+
+50
+
+2θ (degree)
+
+65
+
+80
+
+500 498
+
+496
+
+494 492
+
+490 488
+
+486
+
+484
+
+482
+
+346
+
+Binding energy (eV)
+
+344
+
+342
+
+340
+
+338
+
+336
+
+334
+
+332
+
+Binding energy (eV)
+
+Fig. 2 | Structural analysis of the BOC device. a, Schematic of the monolithic
+BOC. b, Optical image of the top view of the BOC. c, Optical image of a single
+pixel in the BOC. d, SEM image of the top view of the BOC. e, SEM image of a cross
+section of the BOC. The different colours indicate the different components
+(bottom region). f, Spatial distribution of elements in the MCI layer visualized
+
+using the loci of ToF-SIMS depth profiles. g, XRD pattern of the MCI layer. h, TEM
+and EDS mapping of a single channel of the PdO/SnO2/PAM. i, XRD pattern of the
+sensing-material layer (PdO/SnO2). j,k, High-resolution XPS spectra of Sn 3d (j)
+and Pd 3d (k) of the sensing-material layer (PdO/SnO2). cps, counts per second.
+
+suspended mask-assisted sputtering (SMAS) of diverse MOX. A vertical
+sensor structure with a precisely controlled nanoscale sensing-material
+layer was constructed on nanotubular porous alumina membrane
+(PAM), enabling excellent detection sensitivity to ppb-level concentrations of a molecular gas. The SMAS method forms a multi-component
+interfacial (MCI) layer with a gradient distribution of MOX elements on
+the free-standing PAM, which plays a key role in creating the range of
+sensors. The vertical device structure allows the use of top-to-bottom
+crossbar electrodes to maximize the number of pixels in the miniaturized structure.
+We fabricated a 100 × 100 sensor array with individual sensors
+of size 10 × 10 µm2. We also examined different scales of integration,
+including 10 × 10 and 20 × 20 sensors. The pixel diversity of the BOC
+was used to generate a set of signature patterns for different gas or
+odour molecules (Fig. 1g). Using neural network algorithms, the BOC
+can recognize eight gas species at various concentrations in different
+humidity backgrounds with a prediction accuracy of up to 99.04%.
+The system can accurately recognize the components and concentrations of gas mixtures and can recognize 24 typical odours. To illustrate
+the potential of our approach, we installed a BOC into a quadrupedal
+mobile robot (a robot dog), thus allowing it to identity the odour in a
+blind box.
+
+BOC device fabrication
+
+Nature Electronics
+
+Figure 2a is a schematic illustration of the structure of our BOC device.
+It was designed for high-performance gas detection and reliable discrimination. The chip comprises five major components: an MCI layer
+on top of the PAM substrate, a PdO/SnO2 nanotube sensing-material
+layer in the PAM channel, the top and bottom sensing electrodes, an
+insulating layer and a Pt heater. The fabrication method for the device is
+not CMOS compatible (Extended Data Fig. 1). Figure 2b shows a 10 × 10
+sensor array with a crossbar electrode configuration. The size of the
+individual sensors depends on the intersection area of the top and
+bottom electrodes, which is 140 × 140 µm2 (Fig. 2c). Thus, 100 sensors
+encompass an area of about 8 mm2. In the magnified scanning electron microscopy (SEM) top-view image (Fig. 2d), the characteristics
+of the honeycomb-like structure are clear. The diameter of the pores
+is about 300 nm. Thus, it has a large surface-to-volume ratio, which
+facilitates the access of gas molecules and the interaction between
+the gas molecules and the sensing material to give excellent sensing
+performance29–31. The cross-sectional view of the bottom region of the
+chip (Fig. 2e and Supplementary Fig. 1) clearly shows the vertical and
+ordered nanotube structure. A dense insulating SiO2 layer with a thickness of approximately 2.5 µm delivers excellent electrical insulation
+between the signal electrode and the underlying Pt heating electrode.
+
+Article
+The incorporation of a Pt heater is imperative for elevating the temperature of the 3D sensor-array chip to achieve optimal sensitivity.
+The manufacturing process utilized in our study boasts a distinctive advantage of producing pixels with a wide range of responses within
+a single 3D sensor-array chip. This was achieved by using multi-step
+SMAS to construct an MCI layer, which effectively governs the transport
+of carriers between the top electrode and the sensing-material layer.
+This multi-step SMAS method created a two-dimensional (2D) MOX
+composition gradient in the MCI layer (Supplementary Figs. 2–4).
+By tuning the distance between the suspended mask and the PAM
+substrate and also the relative position of the mask on the PAM, four
+different MOXs (ZnO, NiO, In2O3 and WO3) were successively deposited onto the PAM surface after the ALD of the Pd/SnO2 nanotube
+sensing-material layer (Supplementary Text 1). The spatial distribution of elements in the MCI layer was measured using time-of-flight
+secondary ion mass spectrometry (ToF-SIMS). The SIMS depth profiles
+were acquired in 16 regions with a 4 × 4 array, and the data were used
+to calculate the ion concentrations (Supplementary Figs. 5–7). Each of
+the four cations (Zn+, Ni+, In+ and W+) has a gradient distribution along
+the four orthogonal directions in 2D space; thus, they constitute different pixels in the MCI layer (Fig. 2f and Supplementary Figs. 8 and 9).
+The crystalline phases of the MCI layer were verified by X-ray diffraction (XRD) (Fig. 2g). New compounds, including ZnxWO3 (monoclinic,
+JCPDS no. 43-1035), NiWO4 (monoclinic, JCPDS no. 51-225), In2.2WO3
+(hexagonal, JCPDS no. 37-30) and In2O3(ZnO)17 (rhombohedral, JCPDS
+no. 43-621), were formed during postannealing at 450 °C in addition to
+the original four oxides (Supplementary Fig. 10).
+The sensing-material layer in the PAM channels has a key role in
+determining the final performance of the 3D sensor-array chip (Supplementary Text 1). ALD was employed to achieve the uniform deposition
+of materials in the PAM channels30. SnO2 and Pd layers were successively
+deposited and annealed at 450 °C to improve their crystallinity. The
+uniformity of the thin film was verified by the uniform distribution of
+elemental Sn and Pd in a single PAM channel, as shown in transmission
+electron microscopy (TEM) and energy-dispersive X-ray spectroscopy
+(EDS) mapping (Fig. 2h). The crystal structure and composition of the
+sensing-material layer were determined by XRD, X-ray photoelectron
+spectroscopy (XPS) and high-resolution scanning TEM. From these
+analyses, the tetragonal structures of SnO2 ( JCPDS no. 41-1445) and
+PdO ( JCPDS no. 41-1107) were confirmed, which ultimately formed
+the PdO/SnO2 heterojunction sensing-material layer (Fig. 2i–k and
+Supplementary Figs. 11 and 12).
+
+Device measurement and consistency validation
+
+The peripheral read-out circuit in the BOC was designed to solve the
+sneaky path issue that is induced by the crossbar structure of the electrodes (Fig. 3a and Supplementary Figs. 13 and 14)32. The resistance of
+each pixel in the monolithic 3D sensor-array chip can be read out accurately (Supplementary Fig. 15). To verify the functionality of our BOC,
+a 10 × 10 sensor-array chip was chosen as a proof of concept. The chip
+was suspended and bonded onto a dual in-line ceramic package to give
+a good electrical contact and good heat dissipation. For the working
+temperature of 175 °C used in this work, the power consumption was
+about 240 mW (Supplementary Fig. 16). Each pixel responded differently to different gases, which are reflected in the resistance and gas
+response. The resistances of the 10 × 10 sensor-array chip in dry air at
+175 °C (Fig. 3b and Supplementary Fig. 17) vary in the mega-ohm range
+with a coefficient of variation (CV) of 48.79%. The statistical distribution
+of the resistances of pure SnO2 (CV = 7.12%) and PdO/SnO2 (CV = 7.98%)
+sensor-array chips without the MCI layer was also evaluated to assess
+the availability of the MCI layer.
+To substantiate the consistency of our manufacturing process,
+twelve 100-pixel BOCs were prepared and tested. We, thus, investigated
+the device-to-device repeatability. Ten sensors at fixed positions,
+namely the diagonal sensors in the arrays (sensors 1, 12, 23, 34, 45, 56,
+Nature Electronics
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+67, 78, 89 and 100), were selected. For each sensor from the 12 BOCs,
+we calculated the average value, standard deviation and CV for the
+resistance and gas response. The maximum CVs for the resistance
+and gas response were 17.7% and 17.6%, respectively, demonstrating
+the comparatively excellent repeatability (Extended Data Fig. 2, Supplementary Fig. 18, and Supplementary Tables 2 and 3).
+To examine the perception of our BOC to chemical molecules,
+eight gas species (acetone, carbon monoxide, ethanol, formaldehyde,
+nitrogen dioxide, toluene, hydrogen and isobutylene) with concentrations ranging from 20 ppb to 4 ppm were tested. We employed the
+Pearson correlation matrix to evaluate the degree of linear correlation amongst data points to quantitatively elucidate the interrelation
+of pixels in the sensor-array chip (Supplementary Fig. 19). The result
+illustrates that there was a discernible correlation between adjacent
+pixels in the sensor-array chip. Furthermore, a gradual increase in
+diversity can be observed with increasing distance from the initial pixel,
+thereby validating the overall diversity of the entire sensor-array chip in
+alignment with the gradient material composition design of our BOC.
+The dynamic sensing response of ten sensing pixels along the
+diagonal line of the BOC (Fig. 3a) to 1 ppm to 100 ppb acetone is shown
+in Fig. 3c, which indicates the reliability of the gas responses and the
+variable sensing behaviours of the different pixels. Indeed, some sensors have a drifting baseline and relatively long response/recovery
+times, mainly due to the relatively low working temperature (175 °C).
+Commercial MOX sensors are usually operated at 300–400 °C to
+achieve good gas response and baseline stability. Although our BOC
+was operated at 175 °C, it has an excellent response to ppb-level gas
+concentrations (Supplementary Table 4). To validate the effect of working temperature on sensing properties, we systematically tested the
+BOC at different temperatures, namely, 125, 175 and 250 °C (Extended
+Data Fig. 3 and Supplementary Fig. 20). The response/recovery times
+gradually decreased with an increase of the working temperature. The
+gas response reached a maximum at 175 °C. After a comprehensive
+consideration of these parameters, particularly the response/recovery
+time, gas response and power consumption, 175 °C was chosen as the
+optimal working temperature for our BOC.
+To visualize the features of the entire BOC, the response values
+were normalized to a greyscale between 0 and 255 by choosing the
+responses to 5 ppm H2 as the ceiling value. The results are presented
+as heat maps, which show the response patterns for different concentrations of gas species under various humidity conditions (Fig. 3d and
+Supplementary Figs. 21–37). For a certain gas molecule, the normalized
+response patterns were highly consistent over a range of concentrations and humidity levels, so that we could recognize the gas species
+accurately and efficiently (Supplementary Fig. 38). Furthermore, artificial intelligence algorithms were developed to support the BOC by
+processing the response patterns.
+
+Single-gas discrimination with the BOC system
+
+The BOC that we developed in conjunction with the algorithm constitutes a biomimetic olfactory system. It is a promising tool for mimicking
+the function of mammalian olfaction. We employed an end-to-end convolutional neural network (CNN) to classify the gas from the response
+patterns (Fig. 3e and Supplementary Text 2)2,33,34. The actual and predicted gases are shown in the confusion matrix in Fig. 3f, which demonstrates the high prediction accuracy of our model. We then analysed the
+misclassified data. A misclassification originates mainly from the low
+concentrations of gas species with similar functional groups, such as
+acetone and formaldehyde. Encouragingly, for the entire dataset (4,160
+samples) of eight gases with different concentrations and humidity
+levels, the optimized model reached a prediction accuracy of 99.04%
+and saturated after 500 training epochs. The training loss (testing loss)
+dropped from the initial 1.32% (1.80%) to 0.02% (0.03%), confirming
+the robustness and reliability of the end-to-end CNN model utilized
+for classifying gas response patterns (Fig. 3g).
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+c
+1 ppm
+
+100
+
+Sensor 1
+
+50
+
+56
+67
+
+100
+
+78
+89
+
+Sensor 12
+
+50
+
+100
+
+100
+
+Sensor 23
+
+50
+100
+
+V
+
+V
+V
+
+V
+
+Resistance (MOhm)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Sensor 45
+
+50
+100
+50
+
+20.0
+17.5
+15.0
+12.5
+10.0
+
+100
+
+Sensor 78
+
+50
+100
+
+Sensor 89
+
+50
+100
+
+7.5
+
+50
+
+5.0
+
+0
+
+0
+
+5,000
+
+10,000 15,000 20,000 25,000
+
+Time (s)
+0
+
+Concentration: 1 ppm
+Carbon
+Monoxide
+
+Ethanol
+
+Formaldehyde
+
+Nitrogen
+dioxide
+
+Toluene
+
+100
+
+150
+
+Hydrogen
+
+200
+
+250
+
+17
+
+0
+
+0
+
+2
+
+0
+
+8
+
+10
+
+0
+
+6
+
+2
+
+0
+
+E
+
+3
+
+5
+
+537
+
+4
+
+0
+
+1
+
+5
+
+5
+
+F
+
+1
+
+13
+
+1
+
+543
+
+0
+
+0
+
+2
+
+0
+
+N
+
+0
+
+1
+
+0
+
+0
+
+479
+
+0
+
+0
+
+0
+
+T
+
+0
+
+3
+
+2
+
+0
+
+0
+
+553
+
+0
+
+2
+
+H
+
+1
+
+1
+
+7
+
+5
+
+0
+
+3
+
+380
+
+3
+
+I
+
+0
+
+0
+
+5
+
+0
+
+0
+
+5
+
+3
+
+467
+
+A
+
+C
+
+E
+
+F
+
+N
+
+T
+
+H
+
+I
+
+Predicted class
+
+99.04 %
+
+100
+
+3
+Train loss
+
+50
+
+2
+
+Test loss
+1
+
+25
+0
+
+4
+
+Accuracy
+
+75
+
+0
+
+100
+
+200
+
+ReLU
+
+300
+
+400
+
+0
+500
+
+Epochs
+
+h 110
+ReLU
+
+100
+90
+
+Dropout
+
+8
+
+Isobutylene
+
+Dry air
+
+Acetone
+
+50
+
+10 × 10 × 20
+Feature maps
+
+Dropout
+
+Sensor 100
+
+1 2 3 4 5 6 7 8 9 10
+
+d
+
+10 × 3 × 3 × 20
+Kernel
+
+Sensor 67
+
+50
+22.5
+
+5
+
+534
+
+g
+
+ReLU
+
+Sensor 56
+
+100
+
+0
+
+0
+
+Train/test loss
+
+b
+
+100
+
+A 536
+C
+
+10 × 10 × 10
+Feature maps
+
+Sensor 34
+
+50
+
+Gas response (%)
+
+V
+
+1 × 3 × 3 × 10
+Kernel
+
+Prediction accuracy (%)
+
+45
+
+f
+
+800 ppb 600 ppb 400 ppb 200 ppb 100 ppb
+
+Actual class
+
+23
+34
+
+e
+
+Acetone
+
+12
+
+LogSoftmax
+
+Target gas
+
+Prediction accuracy (%)
+
+1
+
+FC layer 320
+100
+
+a
+
+10 × 10
+
+80
+
+8×8
+
+70
+
+5×5
+
+60
+50
+40
+30
+
+3×3
+2×2
+1
+
+20
+
+90
+10
+0
+
+30
+40
+50
+
+60
+70
+80
+
+0
+
+0
+10
+20
+
+50% RH
+
+10
+
+Number of sensors
+
+Fig. 3 | Single-gas classification with the BOC. a, Schematic of the crossbar
+electrodes of the BOC. b, Heat map of the resistances of the 10 × 10 sensor-array
+chip under dry air at 175 °C. c, Dynamic sensing curves for ten sensors along the
+diagonal line of the 10 × 10 sensor-array chip for acetone at 1 ppm to 100 ppb
+under dry air as the background gas at 175 °C. d, Normalized response patterns
+(greyscale from 0 to 255) for 1 ppm of different gas species under dry air and 50%
+relative humidity (RH) air as the background gas at 175 °C. e, Schematic of the
+CNN for gas classification. f, Confusion matrix of the actual class and predicted
+
+class when recognizing eight gases (A, acetone; C, carbon monoxide; E, ethanol;
+F, formaldehyde; N, nitrogen dioxide; T, toluene; H, hydrogen; I, isobutylene).
+g, Curves for predicted accuracy, training loss and testing loss versus epochs
+when recognizing eight kinds of gas. h, Prediction accuracy versus the number
+of sensors. The accuracy increases with more sensors. The sample size is 50. The
+error bars indicate the standard deviation (s.d.). Data are presented as mean
+values ± s.d. FC, fully connected; ReLU, rectified linear unit.
+
+To further prove the robustness of the system, we separated the
+training and testing data by the time of collection. We kept testing the
+BOC chip for three months. The sensing data in the first month were
+used as the training dataset, and sensing data from the second and third
+months were used as testing datasets (Supplementary Figs. 39–41).
+The prediction accuracies in the second and third months were 98.55%
+and 96.67%, respectively (Extended Data Fig. 4). Although a small
+degradation of performance was observed during this long-term test,
+the prediction accuracy was still sufficient to satisfy the classification
+requirements.
+
+gas species with various concentrations and humidity levels, which
+accounted for the observed prediction accuracy.
+To address this limitation, the remaining ~20% of the data that
+could not be classified by the four sensors were used as a new dataset for analysis. To ensure a fair comparison of the accuracy versus
+number of sensor tests, the size of the CNN model and the method for
+dividing the data were fixed (Supplementary Text 2 and Supplementary Fig. 43). Gases with different humidity levels were considered
+as different species in this model, resulting in a total of 37 species.
+Figure 3h shows that the accuracy improved rapidly from 15.98%
+(single sensor) to 93.83% (100 sensors) as the number of sensors
+used for classification increased, although the accuracy became saturated after the number of sensors exceeded 25. If the scenario were
+more complicated with more gas species and larger concentration
+ranges, the number of sensing pixels needed to reach saturation
+would be higher. Overall, using more sensors will certainly yield
+higher accuracy, which could be extended as a generic method to
+improve the accuracy and reliability of sensor-array systems. Of
+course, if the number and diversity of pixels (where diversity refers
+to the receptor types) were increased, the more complicated reading out of the signal and data redundancy would have to be taken
+into account.
+
+Scale of sensor array versus gas classification
+accuracy
+
+We designed and conducted experiments on accuracy versus the scale
+of the sensor array to illustrate that increasing the variety of sensors
+plays an instrumental role in achieving higher accuracy. To guarantee
+that the chosen sensors sufficiently embody the material composition
+and discrimination functions of the entire chip, we used sensors evenly
+distributed throughout the chip (Supplementary Text 2). The dataset
+used for analysis comprised 4,160 samples. A prediction accuracy of
+approximately 80% was achieved using only four sensors (Supplementary Fig. 42). However, the limited dataset consisted of only eight
+Nature Electronics
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+a
+
+Ethanol
+
+Mixture 1
+
+Toluene
+
+Mixture 2
+
+Formaldehyde
+
+Mixture 3
+
+Mixture 4
+
+CO
+
+Mixture 5
+
+Mixture 6
+
+b
+
+200
+200
+
+200
+
+pb)
+
+c
+1,000
+
+200
+
+200
+
+pb)
+
+. (p
+onc
+
+lc
+
+ano
+
+Eth
+
+800
+
+600
+
+400
+
+400
+
+200
+
+600
+
+400
+
+200
+
+pb)
+
+. (p
+onc
+
+lc
+
+ano
+
+Eth
+
+800
+
+600
+
+400
+
+600
+
+200
+
+800
+
+600
+
+400
+
+ene
+
+Tolu
+
+150
+600
+
+400
+
+200
+
+pb)
+
+. (p
+onc
+
+c
+
+200
+
+800
+
+CO conc. (ppb)
+
+400
+
+. (p
+onc
+
+lc
+
+ano
+
+Eth
+
+800
+
+600
+
+400
+
+600
+
+800
+
+800
+
+CO conc. (ppb)
+
+400
+
+600
+
+CO conc. (ppb)
+
+Toluene conc. (ppb)
+
+600
+
+Formaldehyde conc. (ppb)
+
+800
+
+800
+
+Formaldehyde conc. (ppb)
+
+250
+800
+
+200
+
+ene
+
+Tolu
+
+800
+
+600
+
+400
+
+c.
+con
+
+100
+400
+
+50
+
+200
+
+b)
+
+(pp
+
+200
+
+600
+
+400
+
+ec
+hyd
+
+alde
+
+m
+For
+
+Predicted ethanol
+
+Predicted toluene
+
+Predicted formaldehyde
+
+Predicted CO
+
+Actual ethanol
+
+Actual toluene
+
+Actual formaldehyde
+
+Actual CO
+
+Mixture 1
+
+Mixture 2
+
+Mixture 3
+
+Mixture 4
+
+Mixture 5
+
+0
+
+800
+
+pb)
+
+. (p
+onc
+
+Mixture 6
+
+Concentration (ppb)
+
+800
+
+600
+
+400
+
+200
+
+0
+0
+
+40
+
+80
+
+120
+
+0
+
+40
+
+80
+
+0
+
+120
+
+40
+
+80
+
+120
+
+0
+
+40
+
+80
+
+120
+
+0
+
+40
+
+80
+
+120
+
+0
+
+40
+
+80
+
+120
+
+Data number
+
+d
+
+10
+
+∆R (%)
+
+8
+
+6
+
+3rd month
+
+2nd month
+
+Ethanol
+Toluene
+Formaldehyde
+CO
+4
+
+2
+
+0
+
+800
+
+600
+
+400
+
+200
+
+800
+
+600
+
+400
+
+200
+
+Concentration (ppb)
+
+Fig. 4 | Classification of gas mixtures by the BOC. a, Experimental design of
+gas mixtures. b, Normalized response patterns for the mixtures with different
+concentrations of gases. c, Concentrations of gas mixtures predicted by a fully
+connected neural network using the first month’s sensing data as the training
+
+dataset and the second month’s sensing data as the testing dataset. Data number
+refers to the number of data we used for algorithm processing. d, Average relative
+error between predicted concentrations and actual concentrations. conc.,
+concentration.
+
+Deconvolution of a gas mixture with the BOC
+system
+
+demonstrate the capability of our BOC, we conducted a quantitative
+analysis of gas mixtures with two of four typical gases (ethanol, toluene, formaldehyde and carbon monoxide) in different ratios (Fig. 4a).
+The dataset included 96 kinds of mixtures with concentrations ranging
+
+Biological olfactory systems can struggle to identify the composition
+and concentration of various gas mixtures. To tackle this challenge and
+Nature Electronics
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+a
+
+0
+
+6
+
+1
+
+2
+
+7
+
+3
+
+8
+
+9
+
+4
+
+13
+
+14
+
+15
+
+19
+
+20
+
+16
+
+0
+
+17
+
+22
+
+23
+
+50
+
+100
+
+150
+
+200
+
+77
+777
+
+10
+10
+10
+10
+10
+
+13
+13
+13
+13
+
+1515
+15
+15
+15
+
+14
+1414
+14
+14
+
+11
+1111
+11
+
+d
+
+23 DMF
+
+21 Repellent
+
+22 Spray paint
+
+21
+21
+21
+21
+21
+
+12
+12
+12
+12
+12
+
+99
+99
+9
+
+55
+55
+
+00
+00
+
+666
+6
+
+19
+19
+19
+19
+19
+
+33333
+1 11
+1
+–60
+
+e
+
+2
+222
+
+22
+22
+22
+22
+
+4
+44
+4
+4
+
+23
+23
+23
+23
+23
+
+18
+18
+18
+18
+18
+
+20
+20
+220
+0
+20
+
+16
+1616
+16
+
+–40
+
+250
+
+19 Detergent
+
+17
+17
+1717
+17
+
+–60
+
+0
+
+20 Repellent
+
+17 Tea
+
+88
+8
+88
+
+40
+
+11
+
+18 Epoxy
+
+60
+
+5
+
+10
+
+21
+
+15 Colza oil
+
+t-SNE + SVM (linear)
+
+–20
+18
+
+16 Ham sausage
+
+13 Cumin
+
+c
+
+20
+12
+
+14 Sesame oil
+
+11 Rosemary
+
+Response patterns
+
+b
+
+12 Zanthoxylum
+
+10 Red wine
+
+9 Vinegar
+
+8 Soy sauce
+
+6 Mango
+
+7 Coconut
+
+5 Banana
+
+4 Persimmon
+
+3 Orange
+
+2 Kiwi fruit
+
+1 Lemon
+
+0 Camphorwood
+
+Odour species
+
+–40
+
+–20
+
+0
+
+20
+
+40
+
+60
+
+Box 1
+
+Box 2
+
+Box 3
+
+Box 4
+
+Box 5
+
+Empty
+
+Orange
+
+Empty
+
+Red wine
+
+Empty
+
+Box 3
+
+Box 2 Box 1 Box 4 Box 5
+
+Camera
+
+f
+BOC system
+
+Resistance
+(MOhm)
+
+g
+
+Box 3
+
+3
+2
+1
+
+0
+
+50
+
+100
+
+150
+
+200
+
+Time (s)
+
+Fig. 5 | Odour classification with the BOC and fusion of olfactory and vision
+sensors in a robot. a, Odour species chosen for recognition by a BOC with 100
+sensors. DMF, dimethylformamide. b, Normalized response patterns to the 24
+odours in a. c, Classification of 24 odours by t-distributed stochastic neighbour
+embedding (t-SNE) and a support vector machine (SVM) with linear kernel
+
+algorithms. d, Configuration of the BOC system installed on a quadruped robot
+for blind box differentiation. e, Recognition of boxes by computer vision, that
+is, the camera. f, Recognition result of our BOC system. g, Real-time recorded
+resistance signal of sensor 61.
+
+from 200 to 800 ppb. As illustrated in Fig. 4b, the response patterns
+changed smoothly with increasing concentration. Taking the mixture
+of toluene and ethanol as an example, with an increase in the concentration of ethanol, the edge regions of the response patterns gradually
+became brighter, which is the same as when the two gases are present
+separately. However, since the response of the sensors to the mixture
+is not simply the sum of two responses from the separate gases due to
+the competitive adsorption and cross-reactions on the surface of the
+sensing material, the different response patterns make it possible for
+an algorithmic model to distinguish the components and concentrations of the mixture.
+As in the single-gas species tests, we separated the training and
+testing data by time of collection to determine the robustness of the
+system in a quantitative analysis of gas mixtures (Supplementary
+Figs. 44–47). The CNN that we utilized before is proficient in feature
+
+extraction. However, when applied to regression, such as predicting gas
+concentrations, the parameterization is time-consuming and computationally intensive. Here, instead of feeding all the raw data into the neural network model, which is complicated and time-consuming, the gas
+response patterns were first dimensionally reduced to ten-dimensional
+vectors by principal component analysis, which both reduced the
+noise and improved the performance of the model. Subsequently, a
+five-layer fully connected neural network was trained end to end to
+predict the concentrations of two-gas mixtures. The model has four
+output neurons to represent the concentrations of ethanol, toluene,
+formaldehyde and carbon monoxide.
+Figure 4c illustrates the predicted concentrations using the first
+month’s sensing data as the training dataset and the second month’s
+sensing data as the testing dataset (results for the third month’s sensing
+data are shown in Supplementary Fig. 48). The results of a statistical
+
+Nature Electronics
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+analysis of the predicted concentrations are shown in Fig. 4d. The average relative error between the predicted concentration and the actual
+concentration of mixtures was calculated as follows:
+ΔR =
+
+Mean (Abs(Pregas N − Actgas N ))
+Actgas N
+
+× 100%,
+
+(1)
+
+where Pregas N is the average of the predicted concentrations of gas N
+and Actgas N is the actual concentration of gas N. Here N represents
+ethanol, toluene, formaldehyde or carbon monoxide. The maximum
+ΔR increased from 7.05% to 8.12% for 200 ppb of a gas species between
+the data for the second and third months. For the highest concentration
+(800 ppb), ΔR was lower than 3%, which proves the accuracy and reliability of our BOC for gas-mixture recognition.
+
+Real-time odour classification with the BOC
+system
+
+We are surrounded by various types of odours, each odour of which
+may have a complex gas composition. The identification and perception
+of odours can not only regulate our emotions, but also sometimes is a
+matter of life and death. To demonstrate the capability of our BOC system to classify odours, we selected 24 objects with different odours, as
+listed in Fig. 5a. One hundred gas response patterns for each odour were
+collected after the signal had stabilized (Fig. 5b and Supplementary
+Fig. 49). To view the distribution and relationship of the 24 odours
+tested by the BOC system, we employed t-distributed stochastic neighbour embedding to convert the 100-dimensional Euclidean distance
+into 2D coordinates using the 30 nearest neighbours among the whole
+dataset according to the conditional probability35. Furthermore, we
+adopted a support vector machine algorithm with a linear kernel to
+divide up the decision space. Each odour is represented by one number and one colour (Fig. 5c and Supplementary Fig. 50). As a result, all
+24 odours are distributed in the space. A real-time demonstration of
+the BOC system identifying a quantity of red wine and a piece of an
+orange is shown in Supplementary Video 1. The result substantiates
+the excellent classification capability of our BOC system. In addition,
+the capability of our BOC system to identify the freshness or safety of
+food is also validated with a time-dependent test of a sliced orange
+(Supplementary Figs. 51 and 52).
+
+Fusion of olfactory and vision sensors on a robot
+
+Elevating intelligence is an inevitable trend in the development of
+advanced robotics. Sensor technology is one of the foundations of a
+robotic implementation. Multi-sensor fusion combines information
+from different sensors to provide a more accurate and reliable perception of the external environment, thus improving the rationality
+of robot decision-making. Even though researchers have integrated
+many different types of sensors on robots, such as temperature sensors, tactile sensors, sound sensors and various kinds of light sensors,
+olfactory sensors have rarely been used. In fact, equipping a robot
+with a sense of smell can make it much more intelligent and expand
+its range of applications.
+To demonstrate the potency of our BOC system for advanced
+robotics, as shown in Fig. 5d, a BOC system was installed on a robot dog
+to bestow the olfactory function on the robot (Supplementary Text
+3). To examine the functionality of the robot, five similar boxes were
+placed in a line. Two of them contained objects with different odours
+(a sample of red wine or a piece of an orange) (Extended Data Fig. 5).
+It is impossible to identify the content of these boxes with only vision
+sensors (cameras) (Fig. 5e). However, with an olfactory function (BOC
+system), the robot first recognizes the shape of a box with its vision. It
+moves from box to box and can identify the internal objects (red wine,
+a piece of orange or empty) utilizing its olfaction capability (Fig. 5f and
+Supplementary Video 2). Figure 5g depicts the real-time signal from
+a typical sensor (no. 61) from our BOC. In this mini reconnaissance
+Nature Electronics
+
+mission, through the fusion of vision and olfaction, the robot can effectively and accurately identify the objects in blind boxes. This clearly
+demonstrates the immense potential of robots equipped with olfaction
+capabilities for a diverse array of future applications, encompassing
+security, anti-terrorism, disaster relief and beyond.
+
+Construction of large sensor arrays
+
+Expanding the sensor array has the potential to enhance discrimination
+power. To substantiate the technological feasibility of constructing
+a large sensor-array chip, we fabricated a 20 × 20 sensor-array BOC
+(with 400 sensors) and a 100 × 100 sensor-array BOC (with 10,000
+sensors). Both have a crossbar electrode configuration (Extended Data
+Fig. 6). The 20 × 20 sensor-array chip, with an individual sensor size of
+100 × 100 µm2, was fabricated by electrode deposition with a shadow
+mask. Its gas response pattern to 1 ppm acetone was collected to assess
+its functionality. The 100 × 100 sensor-array chip was fabricated by
+photolithography, resulting in individual sensors of size 10 × 10 µm2.
+The 10,000 sensors occupy an area of about 4 mm2. Its gas response
+patterns to 1 ppm acetone, ethanol, toluene and formaldehyde demonstrate its ultra-high resolution compared to the 10 × 10 and 20 × 20
+sensor-array chips (Supplementary Fig. 53). With the aid of a more
+advanced algorithm, this BOC has the potential to be utilized under
+highly complex gas/odour scenarios.
+
+Conclusions
+
+We have reported a biomimetic olfactory system based on large monolithically integrated nanotube sensor arrays. Our system uses a monolithic 3D MOX sensor-array chip, fabricated on a nanoporous PAM with
+ALD and a multi-step SMAS method. This produces a MOX MCI layer
+on top of nanotube sensors. The MCI layer has a 2D material composition gradient, which enables a large diversity of sensing pixels inside
+the array. Thus, large sensor arrays ranging from 100 pixels to 10,000
+pixels can be fabricated.
+The sensors have ppb-level sensing performance. With the assistance of different algorithms, the system exhibits high accuracy (up to
+99.04%) in classifying several gas species. Moreover, the system offers
+excellent reliability, accurately identifying the components and concentrations of gas mixtures with a maximum absolute relative error of
+8.12% during a three-month testing period. It can distinguish 24 odours.
+Finally, we integrated a BOC into a quadrupedal mobile robot, so that
+it combines visual and olfactory senses, which could be used for small
+reconnaissance missions.
+Our BOC devices do have certain limitations. The issues associated with MOX technology—which include a long-term drift of the
+baseline, relatively high resistance, relatively high power consumption
+(though lower than other MOX sensors) and a long response/recovery
+time—necessitate further investigation and improvement. We also
+note the need to enhance the manufacturing consistency of our sensor
+chips. Improving device-to-device and batch-to-batch consistency will
+require further optimization of the fabrication process. Furthermore,
+the capabilities of the current device may not satisfy the high industrial standard of maintaining a less than 5% variation, so that further
+improvements are essential.
+
+Methods
+
+Deposition of a PdO/SnO2 sensing film
+
+The device was built using a custom MEMS fabrication process, which
+is incompatible with conventional CMOS due to the free-standing PAM
+(thickness 45 µm, pixel size 450 nm and pore diameter 300 nm). PAMs
+were purchased from Shenzhen Top Membranes Technology Co., Ltd.
+A shadow mask with a 4 mm by 4 mm window size tightly covered the
+PAM substrate to define the deposition region. An SnO2 film was grown
+by ALD (MNT Micro and Nanotech Co., Ltd) on the PAM substrate using
+tetrakis (dimethylamino) tin (C8H24N4Sn, TDMAS, 99.999%) and H2O as
+the precursors and N2 as the carrier and purging gas. The temperatures
+
+Article
+of the TDMAS and H2O were maintained at 70 and 25 °C, respectively.
+The temperature of reaction chamber was kept at 150 °C. SnO2 was
+deposited during 60 cycles of the process. Then Pd was deposited
+during six cycles, also using ALD. In this procedure, palladium (II)
+hexafluoroacetylacetone (99.999%) and hydrazine anhydrous were the
+precursors at temperatures of 80 and 25 °C, respectively. The chamber
+temperature was 200 °C. After that, the sample was transferred to the
+sputtering system for the next step.
+
+Deposition of a suspended mask-assisted gradient film
+Supplementary Figs. 2–4 show the process schematically. A mask with
+a square window measuring 8 mm × 8 mm was suspended over the PAM
+substrate. Diffraction of the plasma flux at the edge of the mask window
+leads to the formation of a gradient in the film during sputtering. The
+mask height was systematically optimized for different materials, as
+illustrated in Supplementary Figs. 2 and 3. Ultimately, a height of 6 mm
+was selected to deposit four kinds of MOX in the sequence ZnO, NiO,
+In2O3 and WO3. Notably, there was a 2 mm shift between the suspended
+mask window and the mask window on the PAM substrate. To enhance
+the variation of the distribution of each element, the suspended mask
+was turned through 90° for the deposition of each MOX. Finally, the
+sample was annealed at 450 °C for 3 h following the sputtering process.
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+The testing gases with a fixed concentration (50 ppm/1,000 ppm) were
+purchased from Asia Pacific Gas Enterprise Co., Ltd. The testing gas
+concentration was controlled through the dilution method with our
+own MATLAB programme, which regulates the ratio of the flow rates
+of the carrier and testing gases. The total flow rate was maintained at
+500 sccm. Moreover, the programme can provide different gas pluses
+with accurate on and off times. The humidity was controlled by the bubbling method with a standard humidity sensor in a testing chamber for
+calibration. The gas response is defined as (Ra − Rg)/Ra × 100% (reducing
+gases) and (Rg − Ra)/Rg × 100% (oxidizing gases), where Ra and Rg are the
+resistances of sensors exposed to background gases (dry/wet air) and
+target gases, respectively.
+
+Description of read-out circuit
+
+The XRD patterns were collected by a X’pert Pro diffractometer (PANalytical). The SEM images of the surface and cross sections were captured
+with the JEOL JSM-7100F and JSM-7800F instruments. The TEM image of
+the single PAM channel was acquired on a JEOL JEM 2010F instrument.
+The EDS elemental mapping was obtained by SEM and TEM attachments. The XPS measurements were conducted on a multi-technique
+surface analysis system (Kratos Axis Ultra DLD Spectrometer). The
+SIMS depth profiles were acquired by a ToF-SIMS spectrometer (Type V,
+ION-TOF GmbH). The thickness of the film produced by sputtering was
+characterized by a surface profiler (Alpha-Step D500 stylus profiler).
+
+To acquire signals from our gas sensor array with a crossbar structure,
+a read-out circuit capable of supporting a 32 × 32 array was designed
+and fabricated. The detailed design of the electrical circuit is illustrated in Supplementary Figs. 13 and 14. The resistance measurement
+of a single pixel was based on a voltage divider circuit with a reference
+resistor. Feedback was applied to idle electrodes to eliminate crosstalk. The active pixel was selected by connecting the corresponding
+column electrode to the reference resistor through the first multiplexer (MUX1) while its row electrode was grounded through MUX2.
+For example, to test the resistance of the sensor at row i and column
+j, MUX1 connected one end of sensor (i, j) to a reference resistor. The
+other end of sensor (i, j) was grounded by connecting the input of ampi
+to ground with MUX2. Then sensor (i, j) and the reference resistor form
+a voltage divider circuit, so that the voltage signal can be tested after
+buffering. To eliminate crosstalk from adjacent sensors, this circuit
+ensures that the voltage of the other electrodes in row i and column j
+remain at Vout. This prevented any sneak current flowing between the
+row i electrode and column j electrode with other electrodes. For the
+column electrodes, only switch j was open, while the other switches
+remain closed. As a result, all column electrodes were connected to
+Vout. Similarly, the row electrodes outside of row i were also connected
+to Vout through buffers. This configuration ensures proper isolation
+and eliminates interference between electrodes. The signal from the
+voltage divider circuit went through a low-pass filter and was sampled
+by a 16 bit analogue-to-digital converter (AD7683). The measurement
+range was 0.02 to 1,000 MΩ, which effectively accommodates the
+resistances of our devices. A microprogrammed control unit was used
+to synchronize these MUXs and the analogue-to-digital conversion
+sampling. For the 10 × 10 sensor array, the test period was 1 s per frame.
+For the 20 × 20 sensor array, the test period was 4 s per frame. The
+100 × 100 sensor-array chip was read out by an assembled system.
+Specifically, the chip was connected to source measurement units (PXI4130, National Instruments) through two 128-channel multipixel units
+(PXI-2530B, National Instruments), which were installed inside a chassis
+(PXI-1031, National Instruments). The entire system was controlled by
+a home-built Python program. For the 100 × 100 sensor array, the test
+period was 45 s per frame.
+
+Sensing measurements
+
+Data availability
+
+Fabrication of electrodes, insulating layer and heater
+Thermal evaporation was utilized twice to deposit 150 nm of Au on
+the top and bottom of the sample as the contact electrodes. For the
+10 × 10 sensor-array chip, a shadow mask with ten lines (width and gap
+both 140 µm) was designed to define the electrode pattern. For the
+20 × 20 sensor-array chip, the line width and gap of the shadow mask
+were reduced to 100 µm. For the 100 × 100 sensor-array chip, we used
+photolithography with two line widths (10 µm and 25 µm), which was
+performed on a Karl Suss MA6 system with a HPR 506 photoresist, with
+process conditions being dual coating at 3,000 rpm for an exposure
+time of 16 s. After the electrode deposition, a 2.5 µm SiO2 layer was
+deposited on the bottom side of the sample by electron-beam evaporation as the insulating layer. Finally, a 200 nm serpentiform Pt heater was
+deposited onto the insulating layer by electron-beam evaporation to
+provide the optimal working temperature for the sensor-array chip. The
+performance of the Pt heater is characterized in Supplementary Fig. 16.
+
+Material characterization
+
+The sensor-array chips, fabricated using the aforementioned procedure, were bonded to a dual in-line ceramic package or leadless chip
+carrier using copper wire and silver paste, which ensure reliable electrical contact and a high signal-to-noise ratio. Notably, the sensor-array
+chip was suspended after the bonding process, resulting in optimal
+gas transmission capabilities. The packaged chip was integrated with
+an electrical circuit for reading out the electrical signal. The sensing
+measurements were performed in a 15 × 15 × 10 cm3 chamber using a
+dynamic gas flow method with a homemade gas supply system, which
+comprises a series of mass flow controllers connected to gas cylinders.
+Supplementary Fig. 54 is a schematic of the gas-sensing system. The carrier gas was synthetic air composed of 20% oxygen and 80% nitrogen.
+Nature Electronics
+
+Data that support the findings of the study are available from the corresponding author upon reasonable request. Source data are provided
+with this paper.
+
+Code availability
+
+All the codes used to support the conclusions of the paper are available
+from the corresponding author upon reasonable request.
+
+References
+1.
+
+Persaud, K. & Dodd, G. Analysis of discrimination mechanisms in
+the mammalian olfactory system using a model nose. Nature 299,
+352–355 (1982).
+
+Article
+2.
+
+Johnson, K. J. & Rose-Pehrsson, S. L. Sensor array design for
+complex sensing tasks. Annu. Rev. Anal. Chem. 8, 287–310 (2015).
+3. Lonergan, M. C. et al. Array-based vapor sensing using chemically
+sensitive, carbon black-polymer resistors. Chem. Mater. 8,
+2298–2312 (1996).
+4. Röck, F., Barsan, N. & Weimar, U. Electronic nose: current status
+and future trends. Chem. Rev. 108, 705–725 (2008).
+5. Jeong, S. Y., Kim, J. S. & Lee, J. H. Rational design of
+semiconductor-based chemiresistors and their libraries for
+next-generation artificial olfaction. Adv. Mater. 32, 2002075
+(2020).
+6. Geng, Y., Peveler, W. J. & Rotello, V. M. Array-based ‘chemical nose’
+sensing in diagnostics and drug discovery. Angew. Chem., Int. Ed.
+58, 5190–5200 (2019).
+7. Johnson, K. & Knapp, A. Selectivity measure for arrays of
+non-specific sensors. Sens. Actuators B Chem. 251, 1076–1088
+(2017).
+8. Turner, A. P. & Magan, N. Electronic noses and disease
+diagnostics. Nat. Rev. Microbiol. 2, 160–166 (2004).
+9. Buck, L. B. Unraveling the sense of smell (Nobel Lecture). Angew.
+Chem., Int. Ed. 44, 6128–6140 (2005).
+10. Saraiva, L. R. et al. A transcriptomic atlas of mammalian olfactory
+mucosae reveals an evolutionary influence on food odor
+detection in humans. Sci. Adv. 5, eaax0396 (2019).
+11. Mori, K., Nagao, H. & Yoshihara, Y. The olfactory bulb: coding and
+processing of odor molecule information. Science 286, 711–715
+(1999).
+12. Jenkins, E. K., DeChant, M. T. & Perry, E. B. When the nose
+doesn’t know: canine olfactory function associated with health,
+management, and potential links to microbiota. Front. Vet. Sci. 5,
+56 (2018).
+13. Kang, H. et al. Multiarray nanopattern electronic nose (e-nose) by
+high-resolution top-down nanolithography. Adv. Funct. Mater. 30,
+2002486 (2020).
+14. Covington, J. A., Marco, S., Persaud, K. C., Schiffman, S. S. &
+Nagle, H. T. Artificial olfaction in the 21st century. IEEE Sens. J. 21,
+12969–12990 (2021).
+15. Stetter, J. R. & Li, J. Amperometric gas sensors – a review. Chem.
+Rev. 108, 352–366 (2008).
+16. Dinh, T. V., Choi, I. Y., Son, Y. S. & Kim, J. C. A review on
+non-dispersive infrared gas sensors: improvement of sensor
+detection limit and interference correction. Sens. Actuators B
+Chem. 231, 529–538 (2016).
+17. Kumar, A. & Prajesh, R. The potential of acoustic wave devices
+for gas sensing applications. Sens. Actuators A Phys. 339, 113498
+(2022).
+18. Liu, X., Zheng, W., Kumar, R., Kumar, M. & Zhang, J. Conducting
+polymer-based nanostructures for gas sensors. Coord. Chem.
+Rev. 462, 214517 (2022).
+19. Liu, K. & Zhang, C. Volatile organic compounds gas sensor based
+on quartz crystal microbalance for fruit freshness detection: a
+review. Food Chem. 334, 127615 (2021).
+20. Dey, A. Semiconductor metal oxide gas sensors: a review. Mater.
+Sci. Eng. B Solid-State Mater. Adv. Technol. 229, 206–217 (2018).
+21. Shulaker, M. M. et al. Three-dimensional integration of
+nanotechnologies for computing and data storage on a single
+chip. Nature 547, 74–78 (2017).
+22. Che Harun, F. K., Taylor, J. E., Covington, J. A. & Gardner, J. W.
+An electronic nose employing dual-channel odour separation
+columns with large chemosensor arrays for advanced odour
+discrimination. Sens. Actuators B Chem. 141, 134–140 (2009).
+23. Beccherelli, R., Zampetti, E., Pantalei, S., Bernabei, M. & Persaud,
+K. C. Design of a very large chemical sensor system for mimicking
+biological olfaction. Sens. Actuators B Chem. 146, 446–452
+(2010).
+Nature Electronics
+
+https://doi.org/10.1038/s41928-023-01107-7
+24. Horrillo, M. C. et al. Measurements of VOCs with a semiconductor
+electronic nose. J. Electrochem. Soc. 145, 2486 (1998).
+25. Kang, K. et al. Micropatterning of metal oxide nanofibers by
+electrohydrodynamic (EHD) printing towards highly integrated
+and multiplexed gas sensor applications. Sens. Actuators B Chem.
+250, 574–583 (2017).
+26. Goschnick, J., Koronczi, I., Frietsch, M. & Kiselev, I. Water pollution
+recognition with the electronic nose KAMINA. Sens. Actuators B
+Chem. 106, 182–186 (2005).
+27. Moon, H. G. et al. All villi-like metal oxide nanostructures-based
+chemiresistive electronic nose for an exhaled breath analyzer.
+Sens. Actuators B Chem. 257, 295–302 (2018).
+28. Chen, Z., Chen, Z., Song, Z., Ye, W. & Fan, Z. Smart gas sensor arrays
+powered by artificial intelligence. J. Semicond. 40, 111601 (2019).
+29. Chen, J. et al. Ultra-low-power smart electronic nose system
+based on three-dimensional tin oxide nanotube arrays. ACS Nano
+12, 6079–6088 (2018).
+30. Song, Z. et al. Wireless self-powered high-performance
+integrated nanostructured-gas-sensor network for future smart
+homes. ACS Nano 15, 7659–7667 (2021).
+31. Tang, W. et al. Microheater integrated nanotube array gas sensor
+for parts-per-trillion level gas detection and single sensor-based
+gas discrimination. ACS Nano 16, 10968–10978 (2022).
+32. Sundaram, S. et al. Learning the signatures of the human grasp
+using a scalable tactile glove. Nature 569, 698–702 (2019).
+33. Lecun, Y., Bengio, Y. & Hinton, G. Deep learning. Nature 521,
+436–444 (2015).
+34. Albert, K. J. et al. Cross-reactive chemical sensor arrays. Chem.
+Rev. 100, 2595–2626 (2000).
+35. Laurens van der Maaten, G. H. Visualizing data using t-SNE. J.
+Mach. Learn. Res. 9, 2579–2605 (2008).
+
+Acknowledgements
+
+This work is supported by the National Key Research and Development
+Program of China (grant no. 2022YFB203500), the Hong Kong
+Innovation Technology Fund (grant no. GHP/014/19SZ), the Zhongshan
+Municipal Science and Technology Bureau (grant no. ZSST21EG05),
+the Internal Fund of the Hong Kong University of Science and
+Technology (HKUST; grant no. IOPCF21EG01), the Center on Smart
+Sensors and Environmental Technologies, Foshan HKUST projects
+(Project Nos. FSUST21-HKUST08D and FSUST21-HKUST09D) and
+the Foshan Innovative and Entrepreneurial Research Team Program
+(grant no. 2018IT100031). Z.F. acknowledges support from the New
+Cornerstone Science Foundation through the XPLORER PRIZE and the
+Hong Kong Alliance of Technology and Innovation through the Bank
+of China (Hong Kong) Science and Technology Innovation Prize. We
+thank the Material and Characterization Preparation Facility and the
+Nanosystem Fabrication Facility, both at HKUST, and also MNT Micro
+and Nanotech Co., Ltd for technical assistance.
+
+Author contributions
+
+Z.F., C.W. and Z.C. conceptualized the experiments and methodology
+design. C.W. fabricated the sensor-array chip and collected the
+sensing test data. Z.C. designed the algorithm and processed the
+collected sensing data. W.Y. and C.L.J.C. helped with validating the
+quadruped robot. Zhu’an Wan and C.L.J.C. assisted with designing
+and fabricating the read-out circuit. C.L.J.C. and Z.C. designed the
+interface programme for data acquisition and visualization. W.T., W.Z.,
+B.R., D.Z. and S.M. contributed to the characterization of the materials
+and devices. Z.M., Z.L., Zixi Wan, F.X., Z.S. and S.P. assisted with the
+fabrication of the sensor-array chip. Y.D. assisted in designing the
+figures. G.L. and K.L. contributed to discussions about the paper.
+Z.F. and Q.Z. provided financial support and oversight of the whole
+project. C.W., Z.C., Zhu’an Wan and Z.F. wrote the paper. All authors
+participated in manuscript revision and refinement.
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+Competing interests
+
+Reprints and permissions information is available at
+www.nature.com/reprints.
+
+Additional information
+
+Publisher’s note Springer Nature remains neutral with regard
+to jurisdictional claims in published maps and institutional
+affiliations.
+
+Supplementary information The online version contains supplementary
+material available at https://doi.org/10.1038/s41928-023-01107-7.
+Correspondence and requests for materials should be addressed to
+Zhiyong Fan.
+
+Springer Nature or its licensor (e.g. a society or other partner) holds
+exclusive rights to this article under a publishing agreement with
+the author(s) or other rightsholder(s); author self-archiving of the
+accepted manuscript version of this article is solely governed by the
+terms of such publishing agreement and applicable law.
+
+Peer review information Nature Electronics thanks the anonymous
+reviewer(s) for their contribution to the peer review of this work.
+
+© The Author(s), under exclusive licence to Springer Nature Limited
+2024
+
+The authors declare no competing interests.
+
+Extended data Extended data are available for this paper at
+https://doi.org/10.1038/s41928-023-01107-7.
+
+Nature Electronics
+
+Article
+
+Extended Data Fig. 1 | Fabrication process of the biomimetic olfactory
+chip (BOC). a, Bare PAM substrate. b, SnO2 deposition inside PAM by ALD. c, Pd
+deposition inside PAM by ALD. d, Multi-component interfacial layer deposition
+
+Nature Electronics
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+on PAM substrate by sputter. e, Top and bottom Au electrodes deposition by
+thermal evaporation. f, SiO2 insulating layer deposition by E-beam evaporation.
+g, Pt heater deposition by E-beam evaporation.
+
+Article
+
+Extended Data Fig. 2 | Device-to-device repeatability test by the statistics
+along the diagonal sensors (Sensor #1, 12, 23, 34, 45, 56, 67, 78, 89, 100, test
+gas: 1 ppm acetone). a, Optical image of twelve 100-pixel BOC chips. b, Average
+resistance of sensors. The sample size used to derive statistics is 12. The error bars
+indicate the standard deviation (SD). Data are presented as mean values +/- SD.
+
+Nature Electronics
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+c, Standard deviation of resistances. d, Coefficient of variation of resistances. e,
+Average gas response of sensors. The sample size used to derive statistics is 12.
+The error bars indicate the standard deviation (SD). Data are presented as mean
+values +/− SD. f, Standard deviation of gas responses. g, Coefficient of variation
+of gas responses.
+
+Article
+
+Extended Data Fig. 3 | The statistical data of the diagonal sensors’ response
+(Sensor #1, 12, 23, 34, 45, 56, 67, 78, 89, 100) in sensor array chip to 1 ppm
+acetone at different working temperatures. a, Response times. b, Recovery
+
+Nature Electronics
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+times. c. Gas responses. The sample size used to derive statistics is 6. The error
+bars indicate the standard deviation (SD). Data are presented as mean values
++/- SD.
+
+Article
+
+Extended Data Fig. 4 | Single gas classification with the BOC (The training
+data is collected in the 1st month and the test data is collected in the 2nd
+and 3rd months.). a, Confusion matrix of the actual class and predicted
+class for recognizing 8 gases (A: acetone, C: carbon monoxide, E: ethanol, F:
+formaldehyde, N: nitrogen dioxide, T: toluene, H: hydrogen, I: isobutylene) by
+
+Nature Electronics
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+using the testing data collected in the 2nd month. b, Confusion matrix of the
+actual class and predicted class for recognizing 8 gases by using the testing data
+collected in the 3rd month. c, Prediction accuracy by using the 1st month data as
+the training data and the 2nd and 3rd months data as the testing data.
+
+Article
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+Extended Data Fig. 5 | The path design of robot for the experiment of the fusion of the quadruped robot’s vision and olfactory functions to implement blind
+box recognition. We design two experiments: one is using only one odour (red wine), and another one is using two odours (orange and red wine).
+
+Nature Electronics
+
+Article
+
+Extended Data Fig. 6 | Construction of ultra-large-scale sensor array BOCs.
+a, Picture of 20 × 20 sensor array chip bonded on LCC chip carrier. b, c, Optical
+images of 20 × 20 sensor array chip with different magnification (scale bar: b is
+1 mm and c is 100 µm). d, Gas response pattern of 20 × 20 sensor array chip to 1
+ppm acetone. e, Picture of 100 × 100 sensor array chip bonded on C-PGA chip
+
+Nature Electronics
+View publication stats
+
+https://doi.org/10.1038/s41928-023-01107-7
+
+carrier. f and g, Optical images of 100 × 100 sensor array chip with different
+magnification (scale bar: f is 1 mm and g is 100 µm). h, SEM image of 100 × 100
+sensor array chip (scale bar: 10 µm). i, Gas response pattern of 100 × 100 sensor
+array chip to 1 ppm acetone.
+
+
